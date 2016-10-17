@@ -1,4 +1,4 @@
-#feedback-effect
+#regl-feedback
 
 add a visual feedback effect to your [regl](http://regl.party) mesh.
 
@@ -13,7 +13,7 @@ example](https://github.com/regl-project/regl/blob/gh-pages/example/bunny.js).
 [view this demo](http://kitties.neocities.org/fbexample.html)
 
 
-```
+``` js
 const regl = require('regl')()
 const bunny = require('bunny')
 const normals = require('angle-normals')
@@ -67,6 +67,39 @@ regl.frame(() => {
 })
 ```
 
+##api
+
+```
+var feedback = require('regl-feedback')
+```
+
+###var drawfeedback = feedback(regl, src)
+
+`regl` is a [regl
+instance](https://github.com/regl-project/regl/blob/gh-pages/API.md).
+
+`src` is a string that contains the glsl code that defines your feedback effect.
+
+in your glsl code you should describe a sample function
+(described below).
+
+###vec3 sample (vec2 uv, sampler2D tex)
+
+`vec2 uv` is the screen coordinates from 0 to 1.
+
+`sampler2D tex` is the texture containing the pixels from
+the screen.
+
+your sample function should return an rgb vec3. you can use
+texture2D to sample from the texture object.
+
+###drawfeedback({texture: feedBackTexture})
+
+this draws the feedback with the sample effect applied to
+it. it samples from `feedBackTexture`.
+
+you can create the feedBackTexture by calling `regl.texture({})`.
+
 ##run the example on your own machine
 
 the below instructions are entered via command line (the
@@ -84,3 +117,11 @@ this:
 `[0006] info  Server running at http://192.168.2.12:9966/ (connect)`
 
 then point your browser to `localhost:9966`.
+
+##install
+
+`npm install regl-feedback`
+
+##license
+
+BSD
