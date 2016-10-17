@@ -128,6 +128,6 @@ BSD
 
 ##acknowledgments
 
-thank you to [substack](twitter.com/substack) and [mikola
+thank you to [substack](https://twitter.com/substack) and [mikola
 lysenko](https://twitter.com/mikolalysenko) for all of
 your help!
