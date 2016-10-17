@@ -125,3 +125,9 @@ then point your browser to `localhost:9966`.
 ##license
 
 BSD
+
+##acknowledgments
+
+thank you to [substack](twitter.com/substack) and [mikola
+lysenko](https://twitter.com/mikolalysenko) for all of
+your help!
