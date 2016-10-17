@@ -1,0 +1,18 @@
+{
+  "name": "regls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "feedbackeffect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angle-normals": "^1.0.0",
+    "budo": "^8.1.0",
+    "bunny": "^1.0.1",
+    "regl": "^1.1.1",
+    "regl-camera": "^1.1.0"
+  }
+}
